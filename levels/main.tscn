@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://djie4k2oc0kp"]
+[gd_scene load_steps=9 format=3 uid="uid://djie4k2oc0kp"]
 
 [ext_resource type="PackedScene" uid="uid://b54cip3mniyob" path="res://player/player.tscn" id="1_glv2v"]
 [ext_resource type="Texture2D" uid="uid://m1m1yysknyel" path="res://assets/navigation/boat.png" id="1_ifaiv"]
 [ext_resource type="Script" uid="uid://s5al5c8fbuc0" path="res://levels/area_2d.gd" id="3_ifaiv"]
-[ext_resource type="Script" uid="uid://uhj0spdhvf5y" path="res://levels/canvas_layer.gd" id="5_ifaiv"]
 
 [sub_resource type="TileSet" id="TileSet_m1504"]
 custom_data_layer_0/name = ""
@@ -118,21 +117,6 @@ shape = SubResource("RectangleShape2D_5k4jt")
 position = Vector2(-643, 0)
 scale = Vector2(22, 22)
 shape = SubResource("RectangleShape2D_qy63d")
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-visible = false
-script = ExtResource("5_ifaiv")
-
-[node name="Control" type="Control" parent="CanvasLayer2"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer2/Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

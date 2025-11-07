@@ -1,6 +1,6 @@
 extends Area2D
 
-signal enable_menu(f)
+signal enable_menu
 var is_in_area
 
 # Called when the node enters the scene tree for the first time.
@@ -13,10 +13,5 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_body_entered(body: CharacterBody2D) -> void:
-	enable_menu.emit()
-	
-
-
-func _on_body_exited(body: Node2D) -> void:
-	enable_menu.emit()
+func _on_body_entered(_body: CharacterBody2D) -> void:
+	get_tree().change_scene_to_file("res://navigation/map.tscn")
