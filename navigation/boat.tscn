@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2xoas4wg0o0o"]
+
+[ext_resource type="Texture2D" uid="uid://m1m1yysknyel" path="res://assets/navigation/boat.png" id="1_ew72l"]
+[ext_resource type="Script" uid="uid://buywvalog00e5" path="res://navigation/boat.gd" id="1_xeonp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pf8ev"]
+radius = 35.0
+height = 136.0
+
+[node name="Boat" type="Area2D"]
+script = ExtResource("1_xeonp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.13968255, 0.1396826)
+texture = ExtResource("1_ew72l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_pf8ev")
