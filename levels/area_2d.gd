@@ -1,11 +1,10 @@
 extends Area2D
 
-signal enable_menu
+signal enable_menu(f)
 var is_in_area
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	add_to_group("Areas")
 	pass # Replace with function body.
 
 
