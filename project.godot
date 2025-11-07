@@ -13,7 +13,6 @@ config_version=5
 config/name="Hackathon Trash Factory Game"
 run/main_scene="uid://djie4k2oc0kp"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
 
 [input]
 
