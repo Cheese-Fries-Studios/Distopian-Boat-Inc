@@ -7,4 +7,4 @@ MY_BRANCH=$(git branch --show-current)
 git checkout main
 git pull
 git checkout $MY_BRANCH
-git rebase main
+git merge main
