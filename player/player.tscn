@@ -22,3 +22,4 @@ shape = SubResource("RectangleShape2D_ij6vw")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource("2_g1dw6")]
+visible = false
