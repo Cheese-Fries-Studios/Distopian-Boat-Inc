@@ -20,5 +20,3 @@ func _physics_process(delta):
 			global_position = global_position.move_toward(target, SPEED * delta)
 		else:
 			target = null
-
-

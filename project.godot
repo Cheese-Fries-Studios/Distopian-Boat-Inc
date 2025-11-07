@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Hackathon Trash Factory Game"
-run/main_scene="uid://djie4k2oc0kp"
+run/main_scene="uid://clj1blb25725y"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
 [gui]

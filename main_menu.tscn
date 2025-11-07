@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://clj1blb25725y"]
+
+[ext_resource type="Texture2D" uid="uid://dvfwnfcgqwd21" path="res://assets/boats-shipping-sea-sunset.jpg" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://by10y13vl0rog" path="res://main_menu.gd" id="1_7vrkn"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vrkn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_06t4h")
+expand_mode = 2
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06
+anchor_top = 0.7
+anchor_right = 0.07
+anchor_bottom = 0.7
+offset_top = -4.0
+offset_right = 8.0
+offset_bottom = 4.0
+grow_vertical = 2
+text = "Start Game"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(600, 200)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.14
+anchor_right = 0.05
+anchor_bottom = 0.14
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="PanelContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 60
+text = "Dystopian Boat Inc"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
