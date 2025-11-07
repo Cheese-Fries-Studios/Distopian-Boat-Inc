@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvsfu8cnw0ale"]
+[gd_scene load_steps=7 format=3 uid="uid://cvsfu8cnw0ale"]
 
 [ext_resource type="Script" uid="uid://cbc6woa8glx4b" path="res://build_mode/control.gd" id="1_h2srw"]
 
@@ -10,42 +10,14 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2srw"]
-bg_color = Color(0, 0, 0, 0.20392157)
+bg_color = Color(0, 0, 0, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8nbne"]
-bg_color = Color(0.2627451, 0.3372549, 0.3882353, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
+[sub_resource type="Theme" id="Theme_h2srw"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mucq1"]
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tfg7"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejvrg"]
-bg_color = Color(0.18492267, 0.24293429, 0.28257576, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mouy7"]
-bg_color = Color(0.48086292, 0.58115125, 0.6503384, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
+[sub_resource type="Theme" id="Theme_x0ufd"]
 
 [node name="Control" type="Control"]
 layout_direction = 4
@@ -76,7 +48,7 @@ anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.9
 anchor_right = 0.5
-anchor_bottom = 0.95
+anchor_bottom = 1.0
 offset_left = -300.0
 offset_top = -68.20001
 offset_right = 300.0
@@ -91,42 +63,142 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 15
 
-[node name="Button" type="Button" parent="buildings_hud/HBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
+[node name="PanelContainer" type="PanelContainer" parent="buildings_hud/HBoxContainer"]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_8nbne")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mucq1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ejvrg")
-theme_override_styles/focus = SubResource("StyleBoxFlat_mouy7")
+theme = SubResource("Theme_h2srw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_5tfg7")
 
-[node name="Button2" type="Button" parent="buildings_hud/HBoxContainer"]
+[node name="Button" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_8nbne")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mucq1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ejvrg")
-theme_override_styles/focus = SubResource("StyleBoxFlat_mouy7")
+theme = SubResource("Theme_x0ufd")
 
-[node name="Button3" type="Button" parent="buildings_hud/HBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_8nbne")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mucq1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ejvrg")
-theme_override_styles/focus = SubResource("StyleBoxFlat_mouy7")
+[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+text = "Conveyor"
 
-[node name="Button4" type="Button" parent="buildings_hud/HBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
+[node name="PanelContainer2" type="PanelContainer" parent="buildings_hud/HBoxContainer"]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_8nbne")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mucq1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ejvrg")
-theme_override_styles/focus = SubResource("StyleBoxFlat_mouy7")
+theme = SubResource("Theme_h2srw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_5tfg7")
 
-[node name="Button5" type="Button" parent="buildings_hud/HBoxContainer"]
+[node name="Button" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer2"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_8nbne")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mucq1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ejvrg")
-theme_override_styles/focus = SubResource("StyleBoxFlat_mouy7")
+theme = SubResource("Theme_x0ufd")
+
+[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer2/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+text = "Conveyor"
+
+[node name="PanelContainer3" type="PanelContainer" parent="buildings_hud/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_h2srw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_5tfg7")
+
+[node name="Button" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = SubResource("Theme_x0ufd")
+
+[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer3/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+text = "Conveyor"
+
+[node name="PanelContainer4" type="PanelContainer" parent="buildings_hud/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_h2srw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_5tfg7")
+
+[node name="Button" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer4"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = SubResource("Theme_x0ufd")
+
+[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer4/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+text = "Conveyor"
+
+[node name="PanelContainer5" type="PanelContainer" parent="buildings_hud/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_h2srw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_5tfg7")
+
+[node name="Button" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer5"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = SubResource("Theme_x0ufd")
+
+[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer5/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+text = "Conveyor"

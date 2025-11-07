@@ -14,6 +14,10 @@ config/name="Hackathon Trash Factory Game"
 run/main_scene="uid://djie4k2oc0kp"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
 [input]
 
 up={
