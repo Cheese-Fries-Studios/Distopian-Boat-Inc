@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cccpfcuiw2djv"]
+
+[ext_resource type="Script" uid="uid://f8hl6gdki3me" path="res://navigation/trash_pile.gd" id="1_rtr7w"]
+[ext_resource type="Texture2D" uid="uid://4dobllelwbh6" path="res://assets/navigation/trash_pile.png" id="2_effo0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2rnrn"]
+
+[node name="TrashPile" type="Area2D"]
+script = ExtResource("1_rtr7w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.020561855, 0.020561855)
+texture = ExtResource("2_effo0")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+scale = Vector2(0.98695326, 0.971607)
+shape = SubResource("CircleShape2D_2rnrn")
