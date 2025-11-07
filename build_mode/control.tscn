@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvsfu8cnw0ale"]
+[gd_scene load_steps=8 format=3 uid="uid://cvsfu8cnw0ale"]
 
 [ext_resource type="Script" uid="uid://cbc6woa8glx4b" path="res://build_mode/control.gd" id="1_h2srw"]
+[ext_resource type="Script" uid="uid://bypwhfxmni8qo" path="res://build_mode/tile_1.gd" id="2_x0ufd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0ufd"]
 bg_color = Color(0.2627451, 0.3372549, 0.3882353, 1)
@@ -68,12 +69,13 @@ layout_mode = 2
 theme = SubResource("Theme_h2srw")
 theme_override_styles/panel = SubResource("StyleBoxFlat_5tfg7")
 
-[node name="Button" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer"]
+[node name="tile1" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme = SubResource("Theme_x0ufd")
+script = ExtResource("2_x0ufd")
 
-[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer/Button"]
+[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer/tile1"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
