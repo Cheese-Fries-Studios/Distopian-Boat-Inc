@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2vot0jm8kk3p"
-path="res://.godot/imported/jeff.png-0eb1d393df6ce73a9c28b2792f111470.ctex"
+path="res://.godot/imported/jeff.png-eecf77e07f528c469aa75ae3466d7425.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/jeff.png"
-dest_files=["res://.godot/imported/jeff.png-0eb1d393df6ce73a9c28b2792f111470.ctex"]
+source_file="res://assets/player/jeff.png"
+dest_files=["res://.godot/imported/jeff.png-eecf77e07f528c469aa75ae3466d7425.ctex"]
 
 [params]
 
