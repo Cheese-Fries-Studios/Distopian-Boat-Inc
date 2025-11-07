@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://djie4k2oc0kp"]
+[gd_scene load_steps=4 format=3 uid="uid://djie4k2oc0kp"]
 
 [ext_resource type="PackedScene" uid="uid://dx0tkseuuf0c2" path="res://player/player.tscn" id="1_glv2v"]
 [ext_resource type="Texture2D" uid="uid://d2vot0jm8kk3p" path="res://assets/player/jeff.png" id="2_wdj6m"]
+[ext_resource type="PackedScene" uid="uid://cq0a6lbivk1vv" path="res://levels/testing-tilemap.tscn" id="3_l8qe7"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,3 +12,5 @@ position = Vector2(79, 25)
 [node name="Jeff" type="Sprite2D" parent="."]
 position = Vector2(497, 125)
 texture = ExtResource("2_wdj6m")
+
+[node name="TileMapLayer" parent="." instance=ExtResource("3_l8qe7")]
