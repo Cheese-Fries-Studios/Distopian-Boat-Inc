@@ -8,3 +8,4 @@ git checkout main
 git pull
 git checkout $MY_BRANCH
 git merge main
+
