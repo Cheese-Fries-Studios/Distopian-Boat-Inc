@@ -1,14 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://b54cip3mniyob"]
+[gd_scene load_steps=5 format=3 uid="uid://b54cip3mniyob"]
 
 [ext_resource type="Script" uid="uid://7lyn1xc1w7iv" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="Texture2D" uid="uid://d2vot0jm8kk3p" path="res://assets/player/jeff.png" id="1_s25n1"]
+[ext_resource type="PackedScene" uid="uid://cvsfu8cnw0ale" path="res://build_mode/control.tscn" id="2_g1dw6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ij6vw"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_rkbax")
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.99999994, 0.99999994)
@@ -17,3 +16,9 @@ texture = ExtResource("1_s25n1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_ij6vw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("2_g1dw6")]

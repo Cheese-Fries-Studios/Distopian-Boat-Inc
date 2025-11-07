@@ -1,20 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://djie4k2oc0kp"]
+[gd_scene load_steps=3 format=4 uid="uid://djie4k2oc0kp"]
 
 [ext_resource type="PackedScene" uid="uid://b54cip3mniyob" path="res://player/player.tscn" id="1_glv2v"]
-[ext_resource type="Texture2D" uid="uid://d2vot0jm8kk3p" path="res://assets/player/jeff.png" id="2_wdj6m"]
 [ext_resource type="PackedScene" uid="uid://cq0a6lbivk1vv" path="res://levels/testing-tilemap.tscn" id="3_l8qe7"]
-[ext_resource type="PackedScene" uid="uid://cvsfu8cnw0ale" path="res://build_mode/control.tscn" id="4_m1504"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_glv2v")]
-position = Vector2(79, 25)
-
-[node name="Jeff" type="Sprite2D" parent="."]
-position = Vector2(497, 125)
-texture = ExtResource("2_wdj6m")
 
 [node name="TileMapLayer" parent="." instance=ExtResource("3_l8qe7")]
-
-[node name="Control" parent="." instance=ExtResource("4_m1504")]
-visible = false
+tile_map_data = PackedByteArray("AAALAPr/AAACAAEAAAALAPv/AAABAAIAAAAKAPr/AAACAAIAAAAKAPn/AAACAAAAAAAJAPn/AAABAAAAAAALAPn/AAADAAAAAAAMAPr/AAACAAAAAAANAPv/AAACAAEAAAANAPz/AAACAAEAAAAOAP3/AAACAAEAAAAOAP7/AAACAAEAAAAPAP//AAADAAEAAAAPAAAAAAADAAIAAAAOAAEAAAAAAAEAAAAOAAIAAAAAAAEAAAAOAAMAAAADAAIAAAANAAMAAAAAAAMAAAAMAAIAAAADAAMAAAALAAEAAAADAAMAAAAKAAAAAAADAAMAAAALAP//AAABAAIAAAALAP7/AAABAAAAAAAMAP7/AAACAAEAAAANAP7/AAACAAEAAAAPAP3/AAACAAEAAAAQAP3/AAADAAAAAAAQAP7/AAADAAIAAAAJAPr/AAABAAEAAAAJAPv/AAAAAAEAAAAJAPz/AAABAAIAAAAKAPz/AAADAAAAAAAKAP3/AAAAAAIAAAANAPr/AAADAAAAAAANAP3/AAACAAEAAAAMAP//AAACAAEAAAAMAP3/AAABAAEAAAAMAPz/AAABAAEAAAAMAAAAAAABAAIAAAAMAPv/AAACAAEAAAAOAPv/AAADAAAAAAAOAPz/AAACAAEAAAAOAP//AAACAAEAAAAOAAAAAAACAAEAAAANAAAAAAACAAIAAAANAP//AAACAAEAAAAPAPz/AAADAAAAAAAPAP7/AAACAAEAAAA=")
