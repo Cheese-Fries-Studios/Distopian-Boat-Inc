@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=4 uid="uid://djie4k2oc0kp"]
+[gd_scene load_steps=8 format=4 uid="uid://djie4k2oc0kp"]
 
 [ext_resource type="PackedScene" uid="uid://b54cip3mniyob" path="res://player/player.tscn" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://s5al5c8fbuc0" path="res://levels/area_2d.gd" id="3_ifaiv"]
 [ext_resource type="PackedScene" uid="uid://cq0a6lbivk1vv" path="res://levels/testing-tilemap.tscn" id="3_l8qe7"]
+[ext_resource type="Texture2D" uid="uid://bhqcgjyijvlbx" path="res://assets/box.jpg" id="3_m1504"]
+[ext_resource type="Script" uid="uid://uhj0spdhvf5y" path="res://levels/canvas_layer.gd" id="5_ifaiv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m1504"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifaiv"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,3 +16,43 @@
 
 [node name="TileMapLayer" parent="." instance=ExtResource("3_l8qe7")]
 tile_map_data = PackedByteArray("AAALAPr/AAACAAEAAAALAPv/AAABAAIAAAAKAPr/AAACAAIAAAAKAPn/AAACAAAAAAAJAPn/AAABAAAAAAALAPn/AAADAAAAAAAMAPr/AAACAAAAAAANAPv/AAACAAEAAAANAPz/AAACAAEAAAAOAP3/AAACAAEAAAAOAP7/AAACAAEAAAAPAP//AAADAAEAAAAPAAAAAAADAAIAAAAOAAEAAAAAAAEAAAAOAAIAAAAAAAEAAAAOAAMAAAADAAIAAAANAAMAAAAAAAMAAAAMAAIAAAADAAMAAAALAAEAAAADAAMAAAAKAAAAAAADAAMAAAALAP//AAABAAIAAAALAP7/AAABAAAAAAAMAP7/AAACAAEAAAANAP7/AAACAAEAAAAPAP3/AAACAAEAAAAQAP3/AAADAAAAAAAQAP7/AAADAAIAAAAJAPr/AAABAAEAAAAJAPv/AAAAAAEAAAAJAPz/AAABAAIAAAAKAPz/AAADAAAAAAAKAP3/AAAAAAIAAAANAPr/AAADAAAAAAANAP3/AAACAAEAAAAMAP//AAACAAEAAAAMAP3/AAABAAEAAAAMAPz/AAABAAEAAAAMAAAAAAABAAIAAAAMAPv/AAACAAEAAAAOAPv/AAADAAAAAAAOAPz/AAACAAEAAAAOAP//AAACAAEAAAAOAAAAAAACAAEAAAANAAAAAAACAAIAAAANAP//AAACAAEAAAAPAPz/AAADAAAAAAAPAP7/AAACAAEAAAA=")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Areas"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("3_ifaiv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-321.00003, -9.999998)
+scale = Vector2(10, 10)
+shape = SubResource("CircleShape2D_m1504")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Area2D"]
+position = Vector2(-360, -10)
+scale = Vector2(5, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_ifaiv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/StaticBody2D/CollisionShape2D"]
+scale = Vector2(0.13999999, 0.13999999)
+texture = ExtResource("3_m1504")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("5_ifaiv")
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
