@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://djie4k2oc0kp"]
 
-[ext_resource type="PackedScene" uid="uid://dx0tkseuuf0c2" path="res://player/player.tscn" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://b54cip3mniyob" path="res://player/player.tscn" id="1_glv2v"]
 [ext_resource type="Texture2D" uid="uid://d2vot0jm8kk3p" path="res://assets/player/jeff.png" id="2_wdj6m"]
 [ext_resource type="PackedScene" uid="uid://cq0a6lbivk1vv" path="res://levels/testing-tilemap.tscn" id="3_l8qe7"]
 
