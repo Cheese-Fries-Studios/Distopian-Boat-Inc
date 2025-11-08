@@ -22,4 +22,5 @@ position = Vector2(462, 858)
 position = Vector2(1756, 927)
 
 [node name="Boat" parent="." instance=ExtResource("1_ttefb")]
-position = Vector2(73, 104)
+position = Vector2(89, 171)
+scale = Vector2(0.245, 0.245)

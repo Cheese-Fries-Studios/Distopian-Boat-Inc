@@ -4,15 +4,14 @@
 [ext_resource type="Script" uid="uid://buywvalog00e5" path="res://navigation/boat.gd" id="1_xeonp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pf8ev"]
-radius = 35.0
-height = 136.0
+radius = 234.0
+height = 1248.0
 
 [node name="Boat" type="Area2D"]
 script = ExtResource("1_xeonp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5707964
-scale = Vector2(0.13968255, 0.1396826)
 texture = ExtResource("1_ew72l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
