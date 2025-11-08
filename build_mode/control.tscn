@@ -1,7 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvsfu8cnw0ale"]
+[gd_scene load_steps=12 format=3 uid="uid://cvsfu8cnw0ale"]
 
 [ext_resource type="Script" uid="uid://cbc6woa8glx4b" path="res://build_mode/control.gd" id="1_h2srw"]
 [ext_resource type="Script" uid="uid://bypwhfxmni8qo" path="res://build_mode/tile_1.gd" id="2_x0ufd"]
+[ext_resource type="Script" uid="uid://c015d3nbyk5vp" path="res://build_mode/tile_2.gd" id="3_8nbne"]
+[ext_resource type="Script" uid="uid://guwsir8atl8a" path="res://build_mode/tile_3.gd" id="4_mouy7"]
+[ext_resource type="Script" uid="uid://bb763emq6g6xd" path="res://build_mode/tile_4.gd" id="5_5tfg7"]
+[ext_resource type="Script" uid="uid://d2487y0e1f7f7" path="res://build_mode/tile_5.gd" id="6_epw8r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0ufd"]
 bg_color = Color(0.2627451, 0.3372549, 0.3882353, 1)
@@ -69,13 +73,13 @@ layout_mode = 2
 theme = SubResource("Theme_h2srw")
 theme_override_styles/panel = SubResource("StyleBoxFlat_5tfg7")
 
-[node name="tile1" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer"]
+[node name="tile_1" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme = SubResource("Theme_x0ufd")
 script = ExtResource("2_x0ufd")
 
-[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer/tile1"]
+[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer/tile_1"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -98,12 +102,13 @@ layout_mode = 2
 theme = SubResource("Theme_h2srw")
 theme_override_styles/panel = SubResource("StyleBoxFlat_5tfg7")
 
-[node name="Button" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer2"]
+[node name="tile_2" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer2"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme = SubResource("Theme_x0ufd")
+script = ExtResource("3_8nbne")
 
-[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer2/Button"]
+[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer2/tile_2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -126,12 +131,13 @@ layout_mode = 2
 theme = SubResource("Theme_h2srw")
 theme_override_styles/panel = SubResource("StyleBoxFlat_5tfg7")
 
-[node name="Button" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer3"]
+[node name="tile_3" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer3"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme = SubResource("Theme_x0ufd")
+script = ExtResource("4_mouy7")
 
-[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer3/Button"]
+[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer3/tile_3"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -154,12 +160,13 @@ layout_mode = 2
 theme = SubResource("Theme_h2srw")
 theme_override_styles/panel = SubResource("StyleBoxFlat_5tfg7")
 
-[node name="Button" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer4"]
+[node name="tile_4" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer4"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme = SubResource("Theme_x0ufd")
+script = ExtResource("5_5tfg7")
 
-[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer4/Button"]
+[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer4/tile_4"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -182,12 +189,13 @@ layout_mode = 2
 theme = SubResource("Theme_h2srw")
 theme_override_styles/panel = SubResource("StyleBoxFlat_5tfg7")
 
-[node name="Button" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer5"]
+[node name="tile_5" type="Button" parent="buildings_hud/HBoxContainer/PanelContainer5"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme = SubResource("Theme_x0ufd")
+script = ExtResource("6_epw8r")
 
-[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer5/Button"]
+[node name="Label" type="Label" parent="buildings_hud/HBoxContainer/PanelContainer5/tile_5"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
