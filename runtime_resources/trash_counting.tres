@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://navigation/trash_storage.gd" id="1_vglpo"]
+
+[resource]
+script = ExtResource("1_vglpo")
+trash_collected = 35

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d2xoas4wg0o0o" path="res://navigation/boat.tscn" id="1_ttefb"]
 [ext_resource type="PackedScene" uid="uid://cccpfcuiw2djv" path="res://navigation/trash_pile.tscn" id="2_esknn"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Map" type="Node2D"]
 script = ExtResource("1_kcufp")
 
 [node name="TrashPile" parent="." groups=["trash_piles"] instance=ExtResource("2_esknn")]
