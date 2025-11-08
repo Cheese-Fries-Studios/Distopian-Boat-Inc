@@ -2,18 +2,18 @@
 
 [ext_resource type="Script" uid="uid://7lyn1xc1w7iv" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="PackedScene" uid="uid://cvsfu8cnw0ale" path="res://build_mode/control.tscn" id="2_g1dw6"]
-[ext_resource type="Texture2D" uid="uid://cdhu0bjx6n22g" path="res://assets/player/player.png" id="2_yw30f"]
+[ext_resource type="Texture2D" uid="uid://dgsk1lkf5tnxt" path="res://assets/player/player_stand.png" id="2_yw30f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1dw6"]
-radius = 11.23381
-height = 79.760056
+radius = 18.535788
+height = 37.071575
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g1dw6"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_rkbax")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.17803396, 0.17803396)
 texture = ExtResource("2_yw30f")
 

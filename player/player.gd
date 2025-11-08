@@ -6,9 +6,27 @@ func get_input():
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	velocity = input_dir * speed
 
-func _physics_process(_delta):
+
+var flip_timer := 0.0
+var flip_interval := 0.3  # seconds
+
+func _physics_process(delta):
 	get_input()
+
+	if velocity == Vector2.ZERO:
+		$Sprite.texture = load("res://assets/player/player_stand.png")
+	else:
+		$Sprite.texture = load("res://assets/player/player_walk.png")
+		rotation = velocity.angle() + deg_to_rad(90)
+		
+		# flip periodically
+		flip_timer += delta
+		if flip_timer >= flip_interval:
+			$Sprite.flip_h = !$Sprite.flip_h
+			flip_timer = 0.0
+
 	move_and_slide()
+
 	
 @onready var button1 = get_node("CanvasLayer/Control")
 @onready var button2 = get_node("CanvasLayer/Control")
