@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=4 uid="uid://djie4k2oc0kp"]
 
 [ext_resource type="PackedScene" uid="uid://b54cip3mniyob" path="res://player/player.tscn" id="1_glv2v"]
-[ext_resource type="Texture2D" uid="uid://m1m1yysknyel" path="res://assets/navigation/boat.png" id="1_ifaiv"]
+[ext_resource type="Texture2D" uid="uid://cvruk4mtlac81" path="res://assets/navigation/boat.png" id="1_ifaiv"]
 [ext_resource type="Script" uid="uid://s5al5c8fbuc0" path="res://levels/area_2d.gd" id="3_ifaiv"]
 [ext_resource type="Texture2D" uid="uid://b6876seqfrnyd" path="res://objects/spelunky_shop(1).png" id="4_ifaiv"]
-[ext_resource type="Script" uid="uid://dhmv1w6i1i0tt" path="res://levels/tile_map_layer.gd" id="5_5k4jt"]
+[ext_resource type="Script" path="res://levels/tile_map_layer.gd" id="5_5k4jt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m1504"]
 
@@ -46,8 +46,7 @@ sources/3 = SubResource("TileSetAtlasSource_qy63d")
 [node name="Node2D" type="Node2D"]
 
 [node name="Boat" type="Sprite2D" parent="."]
-rotation = -1.5707964
-scale = Vector2(3, 3)
+scale = Vector2(2.664432, 2.664432)
 texture = ExtResource("1_ifaiv")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_glv2v")]
