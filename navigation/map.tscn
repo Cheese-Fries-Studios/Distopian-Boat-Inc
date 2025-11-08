@@ -7,6 +7,11 @@
 [node name="Map" type="Node2D"]
 script = ExtResource("1_kcufp")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1923.0
+offset_bottom = 1079.0
+color = Color(0.4707477, 0.7664721, 0.9298865, 1)
+
 [node name="TrashPile" parent="." groups=["trash_piles"] instance=ExtResource("2_esknn")]
 position = Vector2(1014, 296)
 
@@ -14,6 +19,7 @@ position = Vector2(1014, 296)
 position = Vector2(462, 858)
 
 [node name="TrashPile3" parent="." groups=["trash_piles"] instance=ExtResource("2_esknn")]
-position = Vector2(1668, 863)
+position = Vector2(1756, 927)
 
 [node name="Boat" parent="." instance=ExtResource("1_ttefb")]
+position = Vector2(73, 104)

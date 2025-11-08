@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cvruk4mtlac81" path="res://assets/navigation/boat.png" id="1_ifaiv"]
 [ext_resource type="Script" uid="uid://s5al5c8fbuc0" path="res://levels/area_2d.gd" id="3_ifaiv"]
 [ext_resource type="Texture2D" uid="uid://b6876seqfrnyd" path="res://objects/spelunky_shop(1).png" id="4_ifaiv"]
-[ext_resource type="Script" uid="uid://dhmv1w6i1i0tt" path="res://levels/tile_map_layer.gd" id="5_5k4jt"]
+[ext_resource type="Script" path="res://levels/tile_map_layer.gd" id="5_5k4jt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m1504"]
 
@@ -39,6 +39,13 @@ tile_size = Vector2i(64, 64)
 sources/3 = SubResource("TileSetAtlasSource_qy63d")
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = -4147.0
+offset_top = -2785.0
+offset_right = 3677.0
+offset_bottom = 3065.0
+color = Color(0.4259849, 0.6300745, 0.8513639, 1)
 
 [node name="Boat" type="Sprite2D" parent="."]
 scale = Vector2(2.664432, 2.664432)

@@ -4,8 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cvsfu8cnw0ale" path="res://build_mode/control.tscn" id="2_g1dw6"]
 [ext_resource type="Texture2D" uid="uid://cdhu0bjx6n22g" path="res://assets/player/player.png" id="2_yw30f"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ij6vw"]
-size = Vector2(26.8, 75.799995)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1dw6"]
+radius = 11.23381
+height = 79.760056
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g1dw6"]
 
@@ -18,7 +19,7 @@ texture = ExtResource("2_yw30f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.7803397, 1.7803397)
-shape = SubResource("RectangleShape2D_ij6vw")
+shape = SubResource("CapsuleShape2D_g1dw6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
