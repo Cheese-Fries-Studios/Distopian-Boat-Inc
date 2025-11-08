@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://cqu8b5gliike7"]
+[gd_scene load_steps=4 format=3 uid="uid://cqu8b5gliike7"]
+
+[ext_resource type="Script" uid="uid://c5t22i3y1l1mg" path="res://logistics/trash_console.gd" id="1_oweqq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkpap"]
+size = Vector2(40, 40)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oweqq"]
+size = Vector2(40, 40)
 
 [node name="TrashConsole" type="Area2D"]
+script = ExtResource("1_oweqq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nkpap")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_oweqq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
