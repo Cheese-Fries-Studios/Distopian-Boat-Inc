@@ -11,6 +11,8 @@ func _ready() -> void:
 	$Timer.timeout.connect(timeout)
 
 	random_scale = 6 + randi() % 13
+	var random_rotation = deg_to_rad(randi() % 360)
+	rotation = random_rotation
 	scale = Vector2(random_scale, random_scale)
 	
 
