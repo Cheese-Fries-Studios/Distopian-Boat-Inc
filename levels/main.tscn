@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://djie4k2oc0kp"]
+[gd_scene load_steps=14 format=4 uid="uid://djie4k2oc0kp"]
 
 [ext_resource type="PackedScene" uid="uid://b54cip3mniyob" path="res://player/player.tscn" id="1_glv2v"]
 [ext_resource type="Texture2D" uid="uid://cvruk4mtlac81" path="res://assets/navigation/boat.png" id="1_ifaiv"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cqu8b5gliike7" path="res://logistics/trash_console.tscn" id="4_5k4jt"]
 [ext_resource type="Texture2D" uid="uid://b6876seqfrnyd" path="res://objects/spelunky_shop(1).png" id="4_ifaiv"]
 [ext_resource type="Script" uid="uid://dhmv1w6i1i0tt" path="res://levels/tile_map_layer.gd" id="5_5k4jt"]
+[ext_resource type="PackedScene" uid="uid://c2fy0bh5eadq2" path="res://belts/giver.tscn" id="7_etqu2"]
+[ext_resource type="PackedScene" uid="uid://da0gdun2yxp7u" path="res://belts/conveyor.tscn" id="8_jw1n3"]
+[ext_resource type="PackedScene" uid="uid://bhia0hrmbiq5" path="res://belts/trash.tscn" id="9_xdh4e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m1504"]
 
@@ -214,6 +217,25 @@ shape = SubResource("RectangleShape2D_ifaiv")
 tile_map_data = PackedByteArray("AAAPABIAAAACAAIAAAATABMAAAACAAIAAAAUABMAAAACAAIAAAASABMAAAACAAIAAAARABMAAAACAAIAAAARABIAAAACAAIAAAASABIAAAACAAIAAAATABIAAAACAAIAAAAUABIAAAACAAIAAAAQABMAAAACAAIAAAAPABMAAAACAAIAAAAOABMAAAACAAIAAAAQABIAAAACAAIAAAAVABIAAAACAAIAAAAWABIAAAACAAIAAAAWABMAAAACAAIAAAAVABMAAAACAAIAAAATABQAAAACAAIAAAASABQAAAACAAIAAAARABQAAAACAAIAAAAUABEAAAABAAEAAAATABEAAAABAAEAAAASABEAAAABAAEAAAARABEAAAABAAEAAAAQABEAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_6et1j")
 script = ExtResource("5_5k4jt")
+
+[node name="Giver" parent="." instance=ExtResource("7_etqu2")]
+position = Vector2(640, -248)
+
+[node name="Conveyor" parent="." instance=ExtResource("8_jw1n3")]
+position = Vector2(536, -248)
+to_direction = 3
+
+[node name="Conveyor2" parent="." instance=ExtResource("8_jw1n3")]
+position = Vector2(536, -120)
+from_direction = 2
+
+[node name="Conveyor3" parent="." instance=ExtResource("8_jw1n3")]
+position = Vector2(536, -184)
+to_direction = 3
+from_direction = 2
+
+[node name="Trash" parent="." instance=ExtResource("9_xdh4e")]
+position = Vector2(424, -112)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

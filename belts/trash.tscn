@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhia0hrmbiq5"]
+
+[ext_resource type="Script" uid="uid://lbnkuy0kl4yy" path="res://belts/trash.gd" id="1_waabt"]
+[ext_resource type="Texture2D" uid="uid://bhapvs1axlpmu" path="res://assets/Untitled.png" id="2_07kuw"]
+[ext_resource type="PackedScene" uid="uid://dp27iac3ywjd0" path="res://belts/item_holder.tscn" id="3_ny7ua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2el82"]
+size = Vector2(64, 64)
+
+[node name="Trash" type="Area2D"]
+script = ExtResource("1_waabt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2el82")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_07kuw")
+
+[node name="ItemHolder" parent="." instance=ExtResource("3_ny7ua")]
+
+[connection signal="item_held" from="ItemHolder" to="." method="_on_item_holder_item_held"]
